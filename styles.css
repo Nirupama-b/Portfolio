@@ -1,0 +1,470 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg: #070b12;
+  --bg-soft: #0d1320;
+  --text: #e9efff;
+  --muted: #9daccc;
+  --line: rgba(218, 236, 255, 0.14);
+  --accent: #2af8dd;
+  --accent-soft: rgba(42, 248, 221, 0.24);
+  --card: rgba(13, 19, 32, 0.76);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: "Sora", "Manrope", "Avenir Next", "Helvetica Neue", sans-serif;
+  background:
+    radial-gradient(1200px 600px at 12% -10%, rgba(42, 248, 221, 0.16), transparent 60%),
+    radial-gradient(900px 520px at 92% 0%, rgba(98, 119, 255, 0.12), transparent 58%),
+    var(--bg);
+  line-height: 1.6;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(transparent 97%, rgba(255, 255, 255, 0.025) 100%);
+  background-size: 100% 3px;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.15rem 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(12px);
+  background: color-mix(in oklab, var(--bg) 86%, transparent);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.topbar nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.brand,
+.topbar a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 550;
+  letter-spacing: 0.04em;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+}
+
+.topbar a:hover,
+.topbar a:focus-visible {
+  color: var(--text);
+}
+
+main {
+  position: relative;
+  z-index: 2;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4.2rem 1.1rem 4.6rem;
+}
+
+.section {
+  margin-bottom: 1rem;
+}
+
+/* ── Hero with profile photo ── */
+.hero {
+  padding: 2.6rem 0 2.2rem;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-photo {
+  flex-shrink: 0;
+}
+
+.hero-photo img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-soft);
+  box-shadow:
+    0 0 40px rgba(42, 248, 221, 0.15),
+    0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: transform 360ms ease, box-shadow 360ms ease;
+}
+
+.hero-photo img:hover {
+  transform: scale(1.04);
+  box-shadow:
+    0 0 60px rgba(42, 248, 221, 0.25),
+    0 12px 48px rgba(0, 0, 0, 0.5);
+}
+
+.eyebrow {
+  margin: 0 0 0.8rem;
+  color: var(--accent);
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  max-width: 17ch;
+  font-size: clamp(2rem, 5.6vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+
+.summary {
+  max-width: 58ch;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.55vw, 1.22rem);
+}
+
+.cta-row {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.btn {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.58rem 1.03rem;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  color: var(--text);
+  transition: border-color 220ms ease, background-color 220ms ease, color 220ms ease;
+}
+
+.btn-primary {
+  border-color: color-mix(in oklab, var(--accent) 65%, white 18%);
+  background: var(--accent-soft);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  border-color: var(--accent);
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.25rem;
+  background: var(--card);
+}
+
+h2 {
+  margin: 0 0 0.95rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.35;
+  font-weight: 550;
+  color: var(--text);
+}
+
+p {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+}
+
+/* ── Item list details (bullet points from resume) ── */
+.item-details {
+  margin: 0.45rem 0 0;
+  padding-left: 1.25rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.item-details li {
+  margin-bottom: 0.3rem;
+}
+
+.item-details li::marker {
+  color: var(--accent);
+}
+
+/* ── Project tags ── */
+.project-tags {
+  margin: 0.25rem 0 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: color-mix(in oklab, var(--accent) 70%, var(--muted) 30%);
+}
+
+/* ── Items ── */
+.item {
+  padding: 0.8rem 0;
+}
+
+.item + .item {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.item-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+
+.item-head p {
+  margin-top: 0;
+  font-size: 0.88rem;
+}
+
+/* ── GitHub link on projects ── */
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transition: border-color 220ms ease, color 220ms ease, background 220ms ease;
+}
+
+.github-link:hover,
+.github-link:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.github-link svg {
+  flex-shrink: 0;
+}
+
+/* ── Publication / Cert item-head: keep link pinned right ── */
+#publications .item-head,
+#certifications .item-head {
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+
+#publications .item-head h3,
+#certifications .item-head h3 {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ── Publication link ── */
+.pub-link,
+.cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transition: border-color 220ms ease, color 220ms ease, background 220ms ease;
+  white-space: nowrap;
+}
+
+.pub-link:hover,
+.pub-link:focus-visible,
+.cert-link:hover,
+.cert-link:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.pub-link svg,
+.cert-link svg {
+  flex-shrink: 0;
+}
+
+/* ── Contact ── */
+.contact-links {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.48rem 0.8rem;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.82rem;
+}
+
+.contact-links a:hover,
+.contact-links a:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── Custom cursor ── */
+.mf-cursor {
+  z-index: 50;
+  color: var(--accent);
+}
+
+.mf-cursor::before {
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--accent) 65%, white 8%);
+  transition: transform 220ms ease, border-radius 220ms ease, opacity 220ms ease;
+}
+
+.mf-cursor.-text::before {
+  border-radius: 14px;
+  transform: scale(1.85);
+  background: color-mix(in oklab, var(--accent) 78%, white 12%);
+}
+
+.mf-cursor.-pointer::before {
+  transform: scale(1.35);
+}
+
+.mf-cursor.-opaque::before {
+  opacity: 0.38;
+  transform: scale(1.95);
+}
+
+.mf-cursor.-active::before {
+  transform: scale(0.9);
+}
+
+.mf-cursor-text {
+  font-family: "Sora", "Manrope", "Avenir Next", "Helvetica Neue", sans-serif;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  html,
+  body,
+  a,
+  button,
+  [role="button"] {
+    cursor: none;
+  }
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 460ms ease, transform 460ms ease;
+}
+
+[data-reveal].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    padding: 0.9rem 1rem;
+  }
+
+  .topbar nav {
+    gap: 0.55rem;
+  }
+
+  .topbar a,
+  .brand {
+    font-size: 0.68rem;
+    letter-spacing: 0.02em;
+  }
+
+  .brand {
+    display: none;
+  }
+
+  main {
+    padding-top: 2.5rem;
+  }
+
+  .hero {
+    padding-top: 1.5rem;
+  }
+
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .hero-photo img {
+    width: 160px;
+    height: 160px;
+  }
+
+  h1 {
+    max-width: none;
+  }
+
+  .cta-row {
+    justify-content: center;
+  }
+
+  .card {
+    padding: 1.05rem;
+    border-radius: 14px;
+  }
+
+  .item-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
