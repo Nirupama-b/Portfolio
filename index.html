@@ -23,7 +23,7 @@
       imagesrcset="./assets/profile-320.webp 1x, ./assets/profile-640.webp 2x"
       fetchpriority="high"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260404c" />
+    <link rel="stylesheet" href="./styles.css?v=20260801" />
     <link
       rel="preload"
       as="style"
@@ -106,21 +106,32 @@
         <h2>Experience</h2>
         <article class="item">
           <div class="item-head">
-            <h3>AI/ML Engineer Intern · Ascend Cargo Systems</h3>
-            <p>Jan 2026 – Present · San Francisco, USA</p>
+            <h3>Data Science Intern, DSLDP · Travelers</h3>
+            <p>Jun 2026 – Aug 2026 · Hartford, USA</p>
           </div>
           <ul class="item-details">
-            <li>Engineered an Autonomous AI Agent using Python, Java Spring Boot, and MCP to orchestrate LLM-driven graph reconstructions and shipment rate refreshes, targeting a 70% reduction in manual supply chain lookups</li>
+            <li>Built a 3-tier pipeline to flag auto-insurance pricing disparities: a deterministic engine flags variables, a grounded LLM generates narratives, and an agentic RAG chatbot with tool calling aids reasoning and report generation</li>
+            <li>Delivered the solution as a Streamlit dashboard spanning coverages and quarters; scaled to 20+ concurrent users on a modular plug-in architecture that enables onboarding without disrupting production workflows</li>
+            <li>Cut quarterly back-test review from 5 hours to 20 minutes at $0.05 per query in LLM inference cost, with 100% recall against analyst labels, enabling faster model refits and lower-latency pricing decisions for state teams</li>
           </ul>
         </article>
         <article class="item">
           <div class="item-head">
-            <h3>Software AI Engineer · Cogniverse Labs</h3>
+            <h3>AI/ML Engineer Intern · Ascend Cargo Systems</h3>
+            <p>Jan 2026 – May 2026 · San Francisco, USA</p>
+          </div>
+          <ul class="item-details">
+            <li>Architected a production-grade agentic AI system with a custom Java Spring Boot MCP server and dual-LLM design, enabling real-time freight retrieval and autonomous carrier assignment across Slack, Microsoft Teams, email, and web chat, reducing manual assignment by 80%</li>
+            <li>Built an asynchronous document-processing system leveraging GPT-4o Vision and Microsoft Graph API to automate proof-of-delivery verification, achieving 10× higher throughput and reducing latency from 3 hours to 10 min</li>
+          </ul>
+        </article>
+        <article class="item">
+          <div class="item-head">
+            <h3>Data Science Intern · Cogniverse Labs</h3>
             <p>Jan 2025 – Jul 2025 · Bangalore, India</p>
           </div>
           <ul class="item-details">
-            <li>Developed and fine-tuned Faster R-CNN and YOLOv8 object detection models for India's Smart City roadside monitoring initiative, reducing manual inspection workload by 40%</li>
-            <li>Built a computer vision inference pipeline for batch and real-time workloads, deploying models using TorchServe for scalable serving</li>
+            <li>Fine-tuned Faster R-CNN and YOLOv8 models for India's Smart City roadside monitoring and deployed them using TorchServe; this computer vision project reduced manual inspection workload by 40%</li>
           </ul>
         </article>
         <article class="item">
@@ -129,8 +140,8 @@
             <p>Dec 2023 – Jul 2024 · Singapore</p>
           </div>
           <ul class="item-details">
-            <li>Developed a medical CV pipeline using Vision Transformer and TypeScript; analysed real-time inference via Flask REST API to achieve 96% accuracy through research-led fine-tuning</li>
-            <li>Architected a microservice to deploy an SVM-based predictive engine for a Tier-2 Singaporean Telecom provider; optimized high-dimensional feature sets to achieve 92% accuracy while leading a 45-member technical cohort</li>
+            <li>Developed a medical CV pipeline using Vision Transformer with progressive unfreezing and domain-specific augmentation achieving 96% diagnostic accuracy; deployed real-time inference via a Flask REST API</li>
+            <li>Architected and deployed an SVM-based churn prediction microservice for a Tier-2 telecom provider by engineering high-dimensional customer feature sets to achieve 92% accuracy</li>
           </ul>
         </article>
         <article class="item">
@@ -148,20 +159,6 @@
         <h2>Projects</h2>
         <article class="item">
           <div class="item-head">
-            <h3>IQA Assessment of LDCT Images</h3>
-            <a class="github-link" href="https://github.com/Nirupama-b/Low-Dose-CT-Scan-NRIQA-and-Enhancement-" target="_blank" rel="noopener noreferrer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              GitHub
-            </a>
-          </div>
-          <p class="project-tags">Deep Learning · Image Processing · Image Enhancement</p>
-          <ul class="item-details">
-            <li>Authored a Diagnosis based Image Quality Assessment and enhancement technique for Low Dose CT Scans leveraging feature extraction and spatial enhancement methodology</li>
-            <li>The SVR-GS model achieved a 0.969 PLCC, with enhancements verified by Dr. Inthulan Thiraviraj</li>
-          </ul>
-        </article>
-        <article class="item">
-          <div class="item-head">
             <h3>Multilingual Online Polarization Detection</h3>
             <a class="github-link" href="https://github.com/Nirupama-b/Multilingual-Social-Discourse-Analysis" target="_blank" rel="noopener noreferrer">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
@@ -170,8 +167,8 @@
           </div>
           <p class="project-tags">PyTorch · XLM-R · NLLB-200</p>
           <ul class="item-details">
-            <li>Architected an XLM-RoBERTa framework across 9 languages using NLLB-200 for translation-based oversampling to resolve manifold collapse and increase Macro F1 from 0.63 to 0.727</li>
-            <li>Integrated Supervised Contrastive Learning and Focal Loss to disentangle overlapping rhetorical labels, achieving 8% boost through Dynamic Thresholding</li>
+            <li>Engineered an XLM-RoBERTa framework for Polarization Detection across 9 languages using NLLB-200 for translation-based oversampling to resolve manifold collapse and increase Macro F1 from 0.63 to 0.80</li>
+            <li>Integrated Supervised Contrastive Learning, Focal Loss and Dynamic Thresholding to disentangle overlapping rhetorical labels, achieving a further 8% boost in multi-label assignment</li>
           </ul>
         </article>
         <article class="item">
@@ -182,10 +179,10 @@
               GitHub
             </a>
           </div>
-          <p class="project-tags">ML · Python · PySpark · TensorFlow</p>
+          <p class="project-tags">ML · Python · PySpark · Spark MLlib · Pandas</p>
           <ul class="item-details">
-            <li>Predicted Flight Delays for over 1 million records using Catalyst Optimizer and Lazy Evaluation</li>
-            <li>Optimized to 0.6535 AUC via Grid Search and validated scalability by benchmarking PySpark against Pandas</li>
+            <li>Built a distributed flight-delay prediction pipeline on 1M+ records in PySpark, leveraging the Catalyst optimizer and lazy evaluation to scale 4× faster than Pandas</li>
+            <li>Tuned hyperparameters via grid search to achieve 0.88 AUC and validated scalability by benchmarking PySpark against Pandas</li>
           </ul>
         </article>
       </section>
@@ -194,23 +191,38 @@
         <h2>Publications</h2>
         <article class="item">
           <div class="item-head">
-            <h3>Efficient Medical Diagnosis Using ML Algorithm: Comparative Study on Cataract Detection and Analysis</h3>
-            <a class="pub-link" href="https://www.taylorfrancis.com/chapters/edit/10.1201/9781003515470" target="_blank" rel="noopener noreferrer">
+            <h3>Diagnosis-based IQA and Enhancement for Low-Dose CT Images</h3>
+            <a class="pub-link" href="https://www.frontiersin.org/journals/radiology/articles/10.3389/fradi.2025.1704113/full" target="_blank" rel="noopener noreferrer">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               View Paper
             </a>
           </div>
-          <p>Published in <em>Advances in Electrical and Computer Technologies</em> (CRC Press / Taylor &amp; Francis)</p>
+          <p>Published in <em>Frontiers in Radiology</em>, 2025 (PubMed Indexed)</p>
+          <p class="project-tags">Deep Learning · Image Processing · Image Enhancement</p>
+          <ul class="item-details">
+            <li>Authored a diagnosis-based Image Quality Assessment and enhancement technique for Low-Dose CT scans, leveraging feature extraction and spatial enhancement methodology</li>
+            <li>The SVR-GS model achieved a 0.969 PLCC, with enhancements clinically verified by Dr. Inthulan Thiraviraj</li>
+          </ul>
         </article>
         <article class="item">
           <div class="item-head">
             <h3>ANGEL: Automated Navigation Giving Emergency Location — A Robust Tracking System</h3>
-            <a class="pub-link" href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=ANGEL%20Automated%20Navigation%20Giving%20Emergency%20Location%20Nirupama" target="_blank" rel="noopener noreferrer">
+            <a class="pub-link" href="https://doi.org/10.1109/I2ITCON65200.2025.11210510" target="_blank" rel="noopener noreferrer">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               IEEE Xplore
             </a>
           </div>
           <p>Published in <em>2025 International Conference on Information, Implementation, and Innovation in Technology (I2ITCON)</em> — IEEE</p>
+        </article>
+        <article class="item">
+          <div class="item-head">
+            <h3>Efficient Medical Diagnosis Using ML Algorithm: Comparative Study on Cataract Detection and Analysis</h3>
+            <a class="pub-link" href="https://www.google.com/books/edition/Advances_in_Electrical_and_Computer_Tech/dW9fEQAAQBAJ?hl=en&amp;gbpv=1&amp;pg=PA106&amp;printsec=frontcover" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              View Paper
+            </a>
+          </div>
+          <p>Published in <em>Advances in Electrical and Computer Technologies</em> — ICAECT 2024 (CRC Press / Taylor &amp; Francis, Scopus Indexed)</p>
         </article>
       </section>
 
@@ -228,8 +240,8 @@
         </article>
         <article class="item">
           <div class="item-head">
-            <h3>AWS Certified Solutions Architect</h3>
-            <a class="cert-link" href="https://cp.certmetrics.com/amazon/en/public/verify/credential/2b99af7fdd294e06ad8d58f5176d5b1e" target="_blank" rel="noopener noreferrer">
+            <h3>AWS Certified Solutions Architect – Associate</h3>
+            <a class="cert-link" href="https://cp.certmetrics.com/amazon/en/public/verify/credential/d4f9dd2e1bf747fdb088a622e6e2dbc9" target="_blank" rel="noopener noreferrer">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               Verify
             </a>
