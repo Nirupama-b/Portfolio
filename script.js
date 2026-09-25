@@ -1,29 +1,33 @@
 const revealElements = document.querySelectorAll("[data-reveal]");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  {
-    threshold: 0.16,
-    rootMargin: "0px 0px -40px 0px",
-  }
-);
+if ("IntersectionObserver" in window && !prefersReducedMotion) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0,
+      rootMargin: "0px 0px -40px 0px",
+    }
+  );
 
-revealElements.forEach((element) => {
-  if (!element.classList.contains("visible")) {
-    revealObserver.observe(element);
-  }
-});
+  revealElements.forEach((element) => {
+    if (!element.classList.contains("visible")) {
+      element.classList.add("reveal-pending");
+      revealObserver.observe(element);
+    }
+  });
+}
 
 const canUseCustomCursor =
   window.matchMedia("(pointer: fine)").matches &&
-  !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  !prefersReducedMotion;
 
 if (canUseCustomCursor && window.MouseFollower && window.gsap) {
   window.MouseFollower.registerGSAP(window.gsap);
@@ -35,6 +39,16 @@ if (canUseCustomCursor && window.MouseFollower && window.gsap) {
     skewingDeltaMax: 0.22,
     stickDelta: 0.2,
   });
+
+  const cursorElement = document.querySelector(".mf-cursor");
+  const updateCursorVisibility = () => {
+    document.documentElement.classList.toggle(
+      "has-custom-cursor",
+      Boolean(cursorElement && getComputedStyle(cursorElement).position === "fixed")
+    );
+  };
+  updateCursorVisibility();
+  window.addEventListener("load", updateCursorVisibility, { once: true });
 
   document.querySelectorAll(".cta-row a").forEach((button) => {
     button.setAttribute("data-cursor-stick", "");
