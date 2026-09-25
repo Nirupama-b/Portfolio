@@ -23,7 +23,7 @@
       imagesrcset="./assets/profile-320.webp?v=20260924 1x, ./assets/profile-640.webp?v=20260924 2x"
       fetchpriority="high"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260924" />
+    <link rel="stylesheet" href="./styles.css?v=20260924-experience" />
     <link
       rel="preload"
       as="style"
@@ -102,63 +102,118 @@
 
       <section id="experience" class="section card" data-reveal>
         <h2>Experience</h2>
-        <article class="item">
-          <div class="item-head">
-            <h3>AI Autonomy Intern · Skydio</h3>
-            <p>Current</p>
+        <article class="item experience-item" id="experience-skydio" data-photo-caption="Flying a Skydio drone" data-photo-alt="Nirupama operating a drone with a handheld controller at Skydio">
+          <div class="company-logo">
+            <img src="./assets/logos/skydio.png" alt="" width="56" height="56" loading="lazy" decoding="async" />
           </div>
-          <ul class="item-details">
-            <li>Building AI systems for Skydio's Autonomy team</li>
-          </ul>
+          <div class="experience-content">
+            <div class="experience-head">
+              <div>
+                <h3>Skydio</h3>
+                <p class="experience-role">AI Autonomy Intern</p>
+              </div>
+              <p class="experience-meta">Aug 2026 – Jan 2027</p>
+            </div>
+            <ul class="item-details">
+              <li>Building AI systems for Skydio's Autonomy team</li>
+            </ul>
+            <a class="experience-photo-link" href="./assets/experience/skydio.webp" aria-label="View photo from Skydio">View photo</a>
+          </div>
         </article>
-        <article class="item">
-          <div class="item-head">
-            <h3>Data Science Intern, DSLDP · Travelers</h3>
-            <p>Jun 2026 – Aug 2026 · Hartford, USA</p>
+        <article class="item experience-item" id="experience-travelers" data-photo-caption="A summer at Travelers" data-photo-alt="Nirupama standing beneath the red Travelers umbrella in Hartford">
+          <div class="company-logo">
+            <img src="./assets/logos/travelers.svg" alt="" width="56" height="56" loading="lazy" decoding="async" />
           </div>
-          <ul class="item-details">
-            <li>Built a 3-tier pipeline to flag auto-insurance pricing disparities: a deterministic engine flags variables, a grounded LLM generates narratives, and an agentic RAG chatbot with tool calling aids reasoning and report generation</li>
-            <li>Delivered the solution as a Streamlit dashboard spanning coverages and quarters; scaled to 20+ concurrent users on a modular plug-in architecture that enables onboarding without disrupting production workflows</li>
-            <li>Cut quarterly back-test review from 5 hours to 20 minutes at $0.05 per query in LLM inference cost, with 100% recall against analyst labels, enabling faster model refits and lower-latency pricing decisions for state teams</li>
-          </ul>
+          <div class="experience-content">
+            <div class="experience-head">
+              <div>
+                <h3>Travelers</h3>
+                <p class="experience-role">Data Science Intern, DSLDP</p>
+              </div>
+              <p class="experience-meta">Jun 2026 – Aug 2026<span>Hartford, USA</span></p>
+            </div>
+            <ul class="item-details">
+              <li>Built a 3-tier pipeline to flag auto-insurance pricing disparities: a deterministic engine flags variables, a grounded LLM generates narratives, and an agentic RAG chatbot with tool calling aids reasoning and report generation</li>
+              <li>Delivered the solution as a Streamlit dashboard spanning coverages and quarters; scaled to 20+ concurrent users on a modular plug-in architecture that enables onboarding without disrupting production workflows</li>
+              <li>Cut quarterly back-test review from 5 hours to 20 minutes at $0.05 per query in LLM inference cost, with 100% recall against analyst labels, enabling faster model refits and lower-latency pricing decisions for state teams</li>
+            </ul>
+            <a class="experience-photo-link" href="./assets/experience/travelers.webp" aria-label="View photo from Travelers">View photo</a>
+          </div>
         </article>
-        <article class="item">
-          <div class="item-head">
-            <h3>AI/ML Engineer Intern · Ascend Cargo Systems</h3>
-            <p>Jan 2026 – May 2026 · San Francisco, USA</p>
+        <article class="item experience-item" id="experience-ascend">
+          <div class="company-logo">
+            <img src="./assets/logos/ascend.png" alt="" width="56" height="56" loading="lazy" decoding="async" />
           </div>
-          <ul class="item-details">
-            <li>Architected a production-grade agentic AI system with a custom Java Spring Boot MCP server and dual-LLM design, enabling real-time freight retrieval and autonomous carrier assignment across Slack, Microsoft Teams, email, and web chat, reducing manual assignment by 80%</li>
-            <li>Built an asynchronous document-processing system leveraging GPT-4o Vision and Microsoft Graph API to automate proof-of-delivery verification, achieving 10× higher throughput and reducing latency from 3 hours to 10 min</li>
-          </ul>
+          <div class="experience-content">
+            <div class="experience-head">
+              <div>
+                <h3>Ascend Cargo Systems</h3>
+                <p class="experience-role">AI/ML Engineer Intern</p>
+              </div>
+              <p class="experience-meta">Jan 2026 – May 2026<span>San Francisco, USA</span></p>
+            </div>
+            <ul class="item-details">
+              <li>Architected a production-grade agentic AI system with a custom Java Spring Boot MCP server and dual-LLM design, enabling real-time freight retrieval and autonomous carrier assignment across Slack, Microsoft Teams, email, and web chat, reducing manual assignment by 80%</li>
+              <li>Built an asynchronous document-processing system leveraging GPT-4o Vision and Microsoft Graph API to automate proof-of-delivery verification, achieving 10× higher throughput and reducing latency from 3 hours to 10 min</li>
+            </ul>
+          </div>
         </article>
-        <article class="item">
-          <div class="item-head">
-            <h3>Data Science Intern · Cogniverse Labs</h3>
-            <p>Jan 2025 – Jul 2025 · Bangalore, India</p>
+        <article class="item experience-item" id="experience-cogniverse">
+          <div class="company-logo">
+            <img src="./assets/logos/cogniverse.png" alt="" width="56" height="56" loading="lazy" decoding="async" />
           </div>
-          <ul class="item-details">
-            <li>Fine-tuned Faster R-CNN and YOLOv8 models for India's Smart City roadside monitoring and deployed them using TorchServe; this computer vision project reduced manual inspection workload by 40%</li>
-          </ul>
+          <div class="experience-content">
+            <div class="experience-head">
+              <div>
+                <h3>Cogniverse Labs</h3>
+                <p class="experience-role">AI/ML Intern, Product Engineering</p>
+              </div>
+              <p class="experience-meta">Jan 2025 – Jul 2025<span>Bangalore, India</span></p>
+            </div>
+            <ul class="item-details">
+              <li>Fine-tuned Faster R-CNN and YOLOv8 models to detect roadside garbage, footpath encroachments, and other urban infrastructure issues for a government Smart City project</li>
+              <li>Deployed the computer vision models using TorchServe, reducing manual inspection workload by 40%</li>
+              <li>Focused on minimising false positives in real-world street imagery and collaborated with the product engineering team to translate model development into practical urban-monitoring solutions</li>
+            </ul>
+          </div>
         </article>
-        <article class="item">
-          <div class="item-head">
-            <h3>Machine Learning Intern · National University of Singapore</h3>
-            <p>Dec 2023 – Jul 2024 · Singapore</p>
+        <article class="item experience-item" id="experience-nus" data-photo-caption="Teaching at NUS" data-photo-alt="Nirupama presenting machine learning project work at the National University of Singapore">
+          <div class="company-logo">
+            <img src="./assets/logos/nus.svg" alt="" width="56" height="56" loading="lazy" decoding="async" />
           </div>
-          <ul class="item-details">
-            <li>Developed a medical CV pipeline using Vision Transformer with progressive unfreezing and domain-specific augmentation achieving 96% diagnostic accuracy; deployed real-time inference via a Flask REST API</li>
-            <li>Architected and deployed an SVM-based churn prediction microservice for a Tier-2 telecom provider by engineering high-dimensional customer feature sets to achieve 92% accuracy</li>
-          </ul>
+          <div class="experience-content">
+            <div class="experience-head">
+              <div>
+                <h3>National University of Singapore</h3>
+                <p class="experience-role">Machine Learning Intern &amp; Teaching Assistant</p>
+              </div>
+              <p class="experience-meta">Dec 2023 – Jul 2024<span>Singapore</span></p>
+            </div>
+            <ul class="item-details">
+              <li>Developed a medical CV pipeline using Vision Transformer with progressive unfreezing and domain-specific augmentation achieving 96% diagnostic accuracy; deployed real-time inference via a Flask REST API</li>
+              <li>Architected and deployed an SVM-based churn prediction microservice for a Tier-2 telecom provider by engineering high-dimensional customer feature sets to achieve 92% accuracy</li>
+              <li>Served as a Teaching Assistant for the AIYA program in summer 2024, guiding around 45 students from India and the Middle East under Dr. Sanka Rasnayaka at NUS School of Computing</li>
+              <li>Supported hands-on ML model deployment with AWS SageMaker and chatbot development with AWS Lex while mentoring students through their project work</li>
+            </ul>
+            <a class="experience-photo-link" href="./assets/experience/nus.webp" aria-label="View photo from National University of Singapore">View photo</a>
+          </div>
         </article>
-        <article class="item">
-          <div class="item-head">
-            <h3>Data Science Intern · Colt Technology Services</h3>
-            <p>Aug 2023 – Sep 2023 · Bangalore, India</p>
+        <article class="item experience-item" id="experience-colt">
+          <div class="company-logo">
+            <img src="./assets/logos/colt.svg" alt="" width="56" height="56" loading="lazy" decoding="async" />
           </div>
-          <ul class="item-details">
-            <li>Automated sentiment extraction from employee feedback, by designing and training a BERT-based transformer model with end-to-end NLP pipelines, reducing manual analysis effort and achieving 90% model accuracy</li>
-          </ul>
+          <div class="experience-content">
+            <div class="experience-head">
+              <div>
+                <h3>Colt Technology Services</h3>
+                <p class="experience-role">Data Science Intern</p>
+              </div>
+              <p class="experience-meta">Aug 2023 – Sep 2023<span>Bangalore, India</span></p>
+            </div>
+            <ul class="item-details">
+              <li>Automated sentiment extraction from employee feedback, by designing and training a BERT-based transformer model with end-to-end NLP pipelines, reducing manual analysis effort and achieving 90% model accuracy</li>
+            </ul>
+          </div>
         </article>
       </section>
 
@@ -268,8 +323,21 @@
       </section>
     </main>
 
+    <aside class="experience-photo-preview" id="experience-photo-preview" aria-hidden="true" hidden>
+      <img alt="" width="300" height="400" decoding="async" />
+      <p></p>
+    </aside>
+
+    <dialog class="photo-dialog" id="experience-photo-dialog" aria-labelledby="photo-dialog-title">
+      <div class="photo-dialog-header">
+        <h2 id="photo-dialog-title">Experience photo</h2>
+        <button class="photo-close" type="button" autofocus>Close</button>
+      </div>
+      <img alt="" decoding="async" />
+    </dialog>
+
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script defer src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
-    <script defer src="./script.js?v=20260924"></script>
+    <script defer src="./script.js?v=20260924-experience"></script>
   </body>
 </html>

@@ -256,6 +256,189 @@ p {
   font-size: 0.88rem;
 }
 
+/* ── Experience logos and photos ── */
+.experience-item {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 1.15rem;
+  padding: 1.3rem 0;
+}
+
+.company-logo {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.company-logo img {
+  width: 100%;
+  height: 100%;
+  padding: 7px;
+  object-fit: contain;
+}
+
+#experience-ascend .company-logo img,
+#experience-skydio .company-logo img {
+  padding: 0;
+}
+
+.experience-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.65rem 1.25rem;
+}
+
+.experience-role {
+  margin: 0.25rem 0 0;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+.experience-meta {
+  flex-shrink: 0;
+  margin: 0;
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+.experience-meta span {
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.experience-content .item-details {
+  margin-top: 0.85rem;
+}
+
+.experience-photo-link,
+.photo-close {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-size: 0.78rem;
+  text-decoration: none;
+}
+
+.experience-photo-link {
+  margin-top: 0.7rem;
+}
+
+.experience-photo-link:hover,
+.photo-close:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.experience-photo-link:focus-visible,
+.photo-close:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.experience-photo-preview {
+  position: fixed;
+  z-index: 60;
+  width: 260px;
+  padding: 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--bg-soft);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.5);
+  cursor: auto;
+}
+
+.experience-photo-preview[hidden] {
+  display: none;
+}
+
+.experience-photo-preview::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 18px;
+  height: 100%;
+}
+
+.experience-photo-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: min(360px, 65dvh);
+  object-fit: contain;
+  border-radius: 9px;
+}
+
+.experience-photo-preview p {
+  margin: 0;
+  padding: 0.65rem 0.35rem 0.25rem;
+  color: var(--text);
+  font-size: 0.76rem;
+}
+
+.photo-dialog {
+  width: fit-content;
+  max-width: min(900px, calc(100vw - 2rem));
+  max-height: calc(100dvh - 2rem);
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--bg-soft);
+  color: var(--text);
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6);
+}
+
+.photo-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.82);
+  cursor: auto;
+}
+
+.photo-dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.photo-dialog-header h2 {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.photo-dialog > img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100dvh - 10rem);
+  margin: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+body.photo-open {
+  overflow: hidden;
+}
+
+.has-custom-cursor .photo-dialog,
+.has-custom-cursor .photo-dialog button {
+  cursor: auto;
+}
+
 /* ── GitHub link on projects ── */
 .github-link {
   display: inline-flex;
@@ -486,5 +669,29 @@ p {
   .item-head {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .experience-head {
+    flex-direction: column;
+  }
+
+  .experience-meta {
+    text-align: left;
+  }
+
+  .experience-item {
+    grid-template-columns: 46px minmax(0, 1fr);
+    column-gap: 0.85rem;
+  }
+
+  .company-logo {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+  }
+
+  .experience-content .item-details {
+    margin-left: calc(-46px - 0.85rem);
+    margin-top: 1rem;
   }
 }
